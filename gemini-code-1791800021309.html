@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Tata Capital L&D Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Top Control Bar (Demo Controls) -->
+    <header class="demo-controls">
+        <div class="logo-box">Tata Capital</div>
+        <div class="control-grid">
+            <div class="control-group">
+                <label>Business</label>
+                <select id="businessFilter">
+                    <option value="Retail Finance">Retail Finance</option>
+                    <option value="Housing Finance">Housing Finance</option>
+                    <option value="Motor Finance">Motor Finance</option>
+                    <option value="Microfinance">Microfinance</option>
+                    <option value="Corporate & SME">Corporate & SME</option>
+                    <option value="Wealth">Wealth</option>
+                    <option value="DSMG">DSMG</option>
+                    <option value="Cleantech">Cleantech</option>
+                    <option value="Corporate Functions">Corporate Functions</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label>Role</label>
+                <select id="roleFilter">
+                    <option value="Employee">Employee</option>
+                    <option value="Manager">Manager</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label>Type</label>
+                <select id="typeFilter">
+                    <option value="New Employee">New Employee</option>
+                    <option value="Existing Employee">Existing Employee</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label>Days Joined</label>
+                <input type="number" id="daysJoined" value="45" min="0" max="1000">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="nav-scroll-wrapper">
+            <button class="nav-link active" data-tab="about">About</button>
+            <button class="nav-link" data-tab="basket">Learning Basket</button>
+            <button class="nav-link" data-tab="sherpa">Sherpa</button>
+            <button class="nav-link" data-tab="trainings">My Trainings</button>
+            <button class="nav-link" data-tab="compliance">Compliance</button>
+            <button class="nav-link" data-tab="engagement">Engagement</button>
+            <button class="nav-link" data-tab="dashboard">Dashboard</button>
+            <button class="nav-link manager-only" data-tab="manager" style="display:none;">Manager</button>
+        </div>
+    </nav>
+
+    <main id="app-content">
+        <!-- Sections will be injected here by app.js -->
+        <div id="skeleton-loader" class="skeleton-container">
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Tata Capital Learning & Development Team</p>
+        <p><i class="fas fa-envelope"></i> learning.support@tatacapital.com</p>
+    </footer>
+
+    <!-- Modal Structure -->
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
